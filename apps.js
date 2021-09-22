@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { View, 
+import { 
+  View, 
   Text,  
   StyleSheet, 
   TouchableNativeFeedback, 
@@ -10,8 +11,10 @@ import { View,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { awts } from '../ADVFINALS102/counter.js';
 
 const Stack = createStackNavigator();
+
 
  var counterbagel = 0,
     counterpretzel = 0,
@@ -383,7 +386,7 @@ function OrdersScreen({ navigation }) {
    -{"\n"}
    </Text>
    <Text style={styles.order7}> 
-   PRICE: {"\n"}{"\n"}
+     PRICE: {"\n"}{"\n"}
    ${counterbagel*pricebagel} {"\n"}
    ${counterpretzel*pricepretzel} {"\n"}
    ${counterbreadstick*pricebreadstick} {"\n"}
@@ -750,7 +753,7 @@ function BagelsScreen() {
         </Text>
 
 <View>
-<TouchableNativeFeedback onPress={() => counterbagel = counterbagel+1}>
+<TouchableNativeFeedback onPress={awts.incrementValuebagel}>
       <Text
       style={styles.addtocartbutton}
       > Add To Cart </Text>
